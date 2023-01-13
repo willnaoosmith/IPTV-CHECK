@@ -136,8 +136,8 @@ chkurl=$(echo "$chkf" | head -c 4)
 case "$chkurl" in
 http|rtmp|HTTP)
 wget -q "$chkf" -O "$path/temp/stream" & echo $! > "$path/temp/pid.tmp" 
-pid=$(sed -n 1p < "$path/temp/pid.tmp")
-sleep 4 
+pi2=$(sed -n 1p < "$path/temp/pid.tmp")
+sleep 2
 rpid=$(ps -p "$pid" -o pid= | awk '{print$1}')
 if [[ "$rpid" == "$pid" ]]
 then
@@ -230,8 +230,8 @@ wget -q "$chkf" -O "$path/temp/stream" & echo $! > "$path/temp/pid.tmp"
 # reads current wget pid
 pid=$(sed -n 1p < "$path/temp/pid.tmp")
 
-# 4 seconds is the time that wget will download the stream befores gets killed
-sleep 4 
+# 2 seconds is the time that wget will download the stream befores gets killed
+sleep 2
 # checks if wget pid is still active
 rpid=$(ps -p "$pid" -o pid= | awk '{print$1}')
 
