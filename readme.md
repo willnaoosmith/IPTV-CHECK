@@ -1,4 +1,4 @@
-# IPTV-CHECK 1.0
+# IPTV-CHECK
 
 Iptv-check allows you to input a valid iptv file (m3u) to be checked if the video streams are still working or not .
 In case valid urls were found , then the script will create a new iptv (m3u) file with those urls .
@@ -17,5 +17,4 @@ In case valid urls were found , then the script will create a new iptv (m3u) fil
 - apt-get install wget
 
 # Tool Instalation
-
-- git clone https://github.com/peterpt/IPTV-CHECK.git && cd IPTV-CHECK && ./iptv-check
+- git clone https://github.com/willnaoosmith/IPTV-CHECK && cd IPTV-CHECK && sh iptv-check
